@@ -1,0 +1,39 @@
+<head>
+  <link rel="stylesheet" href="signup1.css">
+</head>
+<body >
+    <!-- <img src="signup.jpg" alt=""> -->
+    <section>
+        <!-- <h2>Sign Up</h2> -->
+        <div class="loginbox">
+        <form  action="includes/signup.inc.php" method="post">
+            <h1>SIGN UP!</h1>
+			<p>Full name</p>
+			<input type="text" name="name" placeholder="" style="text-align: center;">
+			<p>Email ID</p>
+			<input type="text" name="email" placeholder="" style="text-align: center;">
+            <p>Username</p>
+			<input type="text" name="uid" placeholder="" style="text-align: center;">
+            <p>Password</p>
+            <input type="password" name="pwd" placeholder="" style="text-align: center;">
+			<p>Confirm password</p>
+			<input type="password" name="pwdrepeat" placeholder="" style="text-align: center;"><br><br><br>
+			<input type="submit" name="submit" value="create account">
+        </form>
+        </div>
+
+
+    <!-- <?php
+if(isset($_GET["error"])){
+
+    if($_GET["error"] == "emptyinput"){
+        echo "<p>Fill in all fields</p>";
+    }
+    else if($_GET["error"]=="invaliduid"){
+        echo "<p>Choose a proper username!</p>";
+    }
+
+}
+?> -->
+</section>
+</body>

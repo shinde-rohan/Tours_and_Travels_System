@@ -1,0 +1,228 @@
+ <!-- <?php
+if(isset($_POST['FullName'])){
+    $server = "localhost";
+    $username = "root";
+    $password = "";
+    $con = mysqli_connect($server,$username,$password);
+if(!$con){
+    die("connection to this database failed due to". mysqli_connect_error());
+}
+
+
+$FullName = $_POST['FullName'];
+$placeName = $_POST['placeName'];
+$PackagePrice = $_POST['PackagePrice'];
+$date = $_POST['date'];
+$mode = $_POST['mode'];
+$sql = "INSERT INTO `TAT`.`userdetails` (`FullName`, `placeName`, `PackagePrice`, `date`, `mode`, `entryDate`) VALUES ('$FullName', '$placeName', '$PackagePrice', '$date', '$mode', current_timestamp());";
+//echo $sql;
+
+if($con->query($sql)==true){
+
+}
+else{
+    echo "ERROR: $sql <br> $con->error";
+}
+
+}
+?>  -->
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="packagesCss.css">
+    <script src="packagesJs.js" async></script>
+    <title>Tours and Travels</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-items">
+                <li><a href="homeHtml.php">HOME</a></li>
+                <li><a href="packages.php">PACKAGES</a></li>
+                <!-- <li><a href="bookings.html">BOOKINGS</a></li> -->
+                <li><a href="about.html">ABOUT</a></li>  
+            </ul>
+            <h1>TOURS AND TRAVELS</h1>
+            <div class="nav-text">
+           <strong>Explore The Best Beautiful Places With Us</strong>
+           </div>
+        </nav> 
+    </header>
+    <main>
+        <div id="place">
+            <div class="package-heading">
+                <h2>PACKAGES</h2>
+               </div>
+               <hr>
+                <hr>
+               <section>
+                 <div class="places">
+                    <div>
+                        <div><strong class="place-name">Agra</strong></div>
+                        <div>
+                        <img src="images/tajmahal.jpg" class="place-img">
+                        </div>
+                        <div class="place-details">
+                            <span class="price">₹10,000</span> 
+                            <button role="button" class="book-button"><a href="#">BOOK NOW</a></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div><strong class="place-name">Rajasthan</strong></div>
+                        <div>
+                        <img src="images/rajasthan.jpg" class="place-img">
+                        </div>
+                        <div class="place-details">
+                            <span class="price">₹15,000</span> 
+                            <button role="button" class="book-button"><a href="#">BOOK NOW</a></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div><strong class="place-name">Kerala</strong></div>
+                        <div>
+                        <img src="images/kerala.jpg" class="place-img">
+                        </div>
+                        <div class="place-details">
+                            <span class="price">₹20,000</span> 
+                            <button role="button"class="book-button"><a href="#">BOOK NOW</a></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div><strong class="place-name">Goa</strong></div>
+                        <div>
+                        <img src="images/background.jpg" class="place-img">
+                        </div>
+                        <div class="place-details">
+                            <span class="price">₹5,000</span> 
+                            <button role="button" class="book-button"><a href="#">BOOK NOW</a></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div><strong class="place-name">Maharashtra</strong></div>
+                        <div>
+                        <img src="images/maharashtra.jpg" class="place-img">
+                        </div>
+                        <div class="place-details">
+                            <span class="price">₹10,000</span> 
+                            <button role="button" class="book-button"><a href="#">BOOK NOW</a></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div><strong class="place-name">Punjab</strong></div>
+                        <div>
+                        <img src="images/punjab.jpg" class="place-img">
+                        </div>
+                        <div class="place-details">
+                            <span class="price">₹15,000</span> 
+                            <button role="button" class="book-button"><a href="#">BOOK NOW</a></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div><strong class="place-name">Karnataka</strong></div>
+                        <div>
+                        <img src="images/karnataka.jpg" class="place-img">
+                        </div>
+                        <div class="place-details">
+                            <span class="price">₹20,000</span> 
+                            <button role="button"class="book-button"><a href="#">BOOK NOW</a></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div><strong class="place-name">Ladhakh</strong></div>
+                        <div>
+                        <img src="images/ladhakh.jpg" class="place-img">
+                        </div>
+                        <div class="place-details">
+                            <span class="price">₹5,000</span> 
+                            <button role="button" class="book-button"><a href="#">BOOK NOW</a></button>
+                        </div>
+                    </div>
+                    <div>
+                        <div><strong class="place-name">Delhi</strong></div>
+                        <div>
+                        <img src="images/delhi.jpg" class="place-img">
+                        </div>
+                        <div class="place-details">
+                            <span class="price">₹10,000</span> 
+                            <button role="button" class="book-button"><a href="#">BOOK NOW</a></button>
+                        </div>
+                    </div>
+                </div>
+               </section>
+        </div>
+       
+      <div class="bookings">
+        <h2 class="book-heading">BOOKINGS</h2>
+        <div class="booking-info">
+          <strong>All of your current bookings are listed below</strong>
+        </div>
+        <div class="booking-details">
+           <div class="details">
+                <span class="booking-heading  place-name booking-column">Place Name</span>
+                <span class="booking-heading  package-booking booking-column">Booking Price</span>
+           </div>
+                 
+         </div>
+        </div>
+        
+        <div class="confirm">
+            <div class="total-price">
+                <strong>Total</strong>
+            <div class="total">
+            <strong>
+             ₹0
+             </strong>
+            </div>
+            </div>
+            <button class="submit-btn">
+                CONTINUE
+            </button>
+        </div>
+      </div>
+        <div class="details-form">
+            <h2 >Details Form</h2>
+            <form class="form" action="packages.php" method="post">
+                <label for="username">Enter your full name:</label>
+                <input type ="text" name="FullName" id="username" required>
+                <br>
+                <br>
+                <label for="placename">Name of the place:</label>
+                <input type="text" name="placeName" id="placename" value="">
+                <br>
+                <br>
+                <label for="package-price">Total package price:</label>
+                <input id="package-price" name="PackagePrice" value="" type="text">
+                <br>
+                <br>
+                <label for="date">Select the date:</label>
+                <input type="date" value="" name="date" id="date" required>
+                <br>
+                <br>
+                <label for="travel-mode">Select the mode of Travel: </label>
+                <select id="travel-mode" name="mode">
+                    <option value="bus">Bus</option>
+                    <option value="flight">Flight</option>
+                </select>
+                <br>
+                 <input type="submit" value="SUBMIT">
+            </form>
+         
+            <br>
+            <br>
+            <br>
+        </div>
+       </main>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <style>
+        body{
+            background-color: #cdd1d2
+        }
+        *{
+            /* font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif  */
+            /* font-family: 'Lobster', cursive; */
+            font-family:apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            
+        }
+        .container{
+            display: grid;
+            grid-gap: 30px;
+            grid-template-areas:
+            'navbar  navbar'
+            'section  aside'
+            'sec1 sec1'
+            'foot foot';  
+            
+        }
+       
+        
+        #navbar{
+            grid-area: navbar;
+            /* border: 2px solid red; */
+            /* background-color: aqua; */
+            /* background: url('images/background.jpg'); */
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 10px;
+            font-size:35px;
+            /* width: 400px; */
+            height: 40px;
+        }
+        #section{
+            grid-area: section;
+            /* border: 2px solid red; */
+            height: 70px;
+           /* background: url('images/goa.jpg'); */
+        }
+        #aside{
+            grid-area: aside;
+            /* border: 2px solid red; */
+            padding-top: 33px;
+            padding-left: 68px;
+            padding-right: 33px;
+            word-spacing: 18px;
+            
+        }
+        
+       
+        #section img{
+            padding-top: 12px;
+            padding-left: 100px;
+            width: 400px;
+        }
+        .sec1{
+            margin-top: 48px;
+            grid-area: sec1;
+            /* border: 2px solid red; */
+            padding:15px;
+            text-align: center;  
+        }
+        .social{
+            font-size:218% ;
+        }
+        .ima-sec img{
+            margin-top: 10px;
+            /* display: inline-block; */
+            width: 44px;
+            height: 41px;
+        }
+        .para{
+           
+            font-family: sans-serif;
+        }
+        footer{
+            grid-area: foot;
+            background-color:#5e5c5c;
+            color: white;
+            text-align: center;
+            padding: 6px 10px;
+            word-spacing: 2px;
+        }
+        .btn  {
+            border: 2px solid white;
+            margin-top: 15px;
+            margin-left: 30px;
+            float: left;
+            width: 90px;
+            height: 24px;
+            padding: 8px;
+            padding-top: 13px;
+            border-radius: 8px;
+            background-color: rgb(58, 40, 17);
+            
+        }
+        .btn a{
+            text-decoration: none;
+            
+            color: white;
+            
+ 
+
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: black;
+            
+        }
+        #insta{
+            margin-left: 10px;
+        }
+        #face{
+            margin-left: 35px;
+        }
+        #whats{
+            margin-left: 35px;
+        }
+        #twit{
+            margin-left: 35px;
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="navbar"><strong>About Us</strong> </div>  
+        <div id="section">
+            <img src="images/goa.jpg" alt="">
+        </div>
+        <div id="aside">
+            <h2>Tours And Travels</h2>
+            <p class="para">Tours and Travels is tourism website, where you can explore tourist places around the globe.
+                Main moto of our website to provide best facillities during tourist,best packeges with minimal price 
+                amount.</p>
+
+        </div>
+        <div class="sec1">
+            <div class="social">Contact us</div>
+            <div class="ima-sec">
+                <img  id='insta'src="images/instagram.png"  alt="instagram">
+                <img id='face'src="images/facebook.png" alt="facebook">
+                <img id='whats'src="images/whatsapp.png" alt="whatsapp">
+                <img id='twit'src="images/twitter.png" alt="twitter">
+            </div>
+            <div class="btn">
+                <a href="homeHtml.php">&#8592; HOME</a>
+            </div>
+        </div>
+        <footer class="foot">
+            Copyright&copy;  www.toursandtravels.com    All right reserved
+        </footer>
+       
+    </div>
+    
+</body>
+</html>
